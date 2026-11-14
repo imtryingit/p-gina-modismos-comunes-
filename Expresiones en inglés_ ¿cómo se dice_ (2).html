@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expresiones en inglés: ¿cómo se dice?</title>
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#1f2430;--mute:#6b7280;--acc:#d9480f;--acc2:#fff1e8;--line:#e8e2d8;--ok:#2b8a3e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181d;--card:#20232a;--ink:#eceae4;--mute:#9aa0aa;--acc:#ff8a4c;--acc2:#2c2420;--line:#33373f;--ok:#69db7c}}
+:root[data-theme="dark"]{--bg:#16181d;--card:#20232a;--ink:#eceae4;--mute:#9aa0aa;--acc:#ff8a4c;--acc2:#2c2420;--line:#33373f;--ok:#69db7c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif}
+nav{display:flex;gap:6px;justify-content:center;padding:14px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+nav a{font:600 15px system-ui,sans-serif;text-decoration:none;color:var(--mute);padding:8px 16px;border-radius:99px}
+nav a.on{background:var(--acc);color:#fff}
+main{max-width:760px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:30px;margin:.2em 0 .1em}h2{font-size:22px;margin-top:1.6em}
+.sub{color:var(--mute);font:15px system-ui,sans-serif}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:18px 0}
+.tag{display:inline-block;font:600 12px system-ui,sans-serif;background:var(--acc2);color:var(--acc);padding:3px 10px;border-radius:99px;letter-spacing:.03em}
+.es{font-size:26px;line-height:1.4;margin:14px 0}
+.en{font-size:24px;color:var(--ok);margin:8px 0;font-weight:bold}
+.why{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px;font-size:16px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+button{font:600 15px system-ui,sans-serif;padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+button.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.hide{display:none}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 13px system-ui,sans-serif;color:var(--mute);text-transform:uppercase}
+.wrap{overflow-x:auto}
+input{font:16px system-ui,sans-serif;padding:10px 14px;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);margin:10px 0}
+.box{background:var(--acc2);border-left:4px solid var(--acc);padding:12px 16px;border-radius:8px;margin:14px 0}
+.x{color:#c92a2a}
+.chip{border-radius:99px;padding:8px 14px;font-size:14px}.chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.rg{background:var(--line);color:var(--mute)}
+select{font:16px system-ui,sans-serif;padding:10px 14px;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+</style>
+</head>
+<body>
+<nav>
+<a href="#practica" data-v="practica">Práctica</a>
+<a href="#explicacion" data-v="explicacion">Explicación</a>
+<a href="#expresiones" data-v="expresiones">Expresiones</a>
+</nav>
+<main id="app"></main>
+<script>
+const C={sal:"Saludos",pos:"Positivas",trab:"Trabajo",mod:"Modismos",neg:"Quejas y emociones",gro:"Groseras (18+)"};
+const S=[
+{c:"sal",r:"informal",es:"¿Qué hubo? ¿Cómo va todo?",en:"Hey, what’s up? How’s it going?",why:"Es el saludo casual entre amigos. <b>What’s up?</b> no se responde literalmente (“arriba”): se contesta <i>Not much</i> o <i>Pretty good, you?</i>. <b>How’s it going?</b> equivale a “¿cómo te va?”."},
+{c:"sal",r:"formal",es:"Mucho gusto en conocerlo.",en:"Pleased to meet you.",why:"<b>Pleased to meet you</b> es más formal que <b>Nice to meet you</b>. No usamos “much pleasure”: la traducción literal suena anticuada."},
+{c:"sal",r:"informal",es:"¡Hace mucho que no nos vemos!",en:"Long time no see!",why:"Expresión fija e informal. Más natural aún: <b>It’s been ages!</b> Un literal (“we haven’t seen each other for much time”) es correcto pero poco natural."},
+{c:"sal",r:"neutro",es:"Cuídate, nos vemos luego.",en:"Take care, see you later.",why:"<b>Cuídate</b> como despedida = <b>take care</b> (no “care yourself”). <b>Nos vemos</b> = <b>see you</b>; no se dice “we see us”."},
+{c:"sal",r:"neutro",es:"Bienvenido, siéntete como en tu casa.",en:"Welcome, make yourself at home.",why:"<b>Siéntete como en tu casa</b> = <b>make yourself at home</b>. Se usa <i>make</i>, no “feel”. Tradición de hospitalidad idéntica en inglés."},
+{c:"pos",r:"neutro",es:"¡Qué buena noticia, me alegro mucho por ti!",en:"That’s great news, I’m so happy for you!",why:"<b>Me alegro por ti</b> = <b>I’m happy for you</b> (la preposición es <i>for</i>). <b>Noticia</b> = <b>news</b>, que es incontable: <i>great news</i>, no “a great news”."},
+{c:"pos",r:"informal",es:"¡Buen trabajo, lo hiciste perfecto!",en:"Nice work, you nailed it!",why:"<b>Nail it</b> = hacerlo perfecto. Es un modismo muy común. Otras opciones: <i>You crushed it</i>, <i>Well done</i> (más neutro)."},
+{c:"pos",r:"informal",es:"Eres un salvavidas, mil gracias.",en:"You’re a lifesaver, thanks a million.",why:"<b>Lifesaver</b> = alguien que te saca de un apuro. <b>Mil gracias</b> = <b>thanks a million</b> (millón, no mil)."},
+{c:"pos",r:"informal",es:"Cuenta conmigo, yo te respaldo.",en:"You can count on me, I’ve got your back.",why:"<b>Contar con</b> = <b>count on</b>. <b>Respaldar</b> = <b>have someone’s back</b> (cuidar tus espaldas). Imagen distinta, mismo sentido."},
+{c:"pos",r:"informal",es:"¡Estuvo buenísimo! Me dejó sin palabras.",en:"It was awesome! I was blown away.",why:"<b>Awesome</b> es el “buenísimo” informal de EE. UU. <b>Blown away</b> = “impresionado”. Literal: <i>speechless</i>, que también sirve."},
+{c:"trab",r:"formal",es:"Quedo atento a su respuesta.",en:"I look forward to hearing from you.",why:"Cierre clásico de correo. <b>Look forward to + -ing</b> (<i>to</i> es preposición, no parte del infinitivo). No se dice “I stay attentive”."},
+{c:"trab",r:"formal",es:"Le escribo para hacer seguimiento a mi solicitud.",en:"I’m writing to follow up on my request.",why:"<b>Hacer seguimiento</b> = <b>follow up on</b>. <b>Le escribo para…</b> = <b>I’m writing to…</b> Es la apertura estándar de un correo formal."},
+{c:"trab",r:"neutro",es:"Tenemos que cumplir con la fecha límite.",en:"We need to meet the deadline.",why:"Con una fecha límite, el verbo es <b>meet</b>, no “fulfill”. Tambien: <i>miss the deadline</i> (no cumplirla). <b>Fecha límite</b> = <i>deadline</i> (una palabra)."},
+{c:"trab",r:"informal",es:"Pongámonos de acuerdo antes de la reunión.",en:"Let’s get on the same page before the meeting.",why:"<b>Be on the same page</b> = estar alineados. Es un modismo corporativo muy usado. Opción más simple: <i>Let’s agree on this</i>."},
+{c:"trab",r:"neutro",es:"Te mantendré al tanto de cualquier novedad.",en:"I’ll keep you posted.",why:"<b>Mantener al tanto</b> = <b>keep someone posted</b> (o <i>in the loop</i>). Se usa mucho en correos y reuniones. No decir “I’ll maintain you informed”."},
+{c:"trab",r:"neutro",es:"Me gustaría pedir un aumento de sueldo.",en:"I’d like to ask for a raise.",why:"<b>Aumento de sueldo</b> = <b>raise</b> (EE. UU.) o <b>pay rise</b> (Reino Unido). <b>Pedir</b> algo = <b>ask for</b> (con <i>for</i>); no “ask a raise”."},
+{c:"gro",r:"vulgar",es:"¡Cállate!",en:"Shut up!",why:"Es grosero y directo. Con amigos puede ser broma; con desconocidos, ofende. Versión cortés: <b>Could you be quiet, please?</b> Muy fuerte: <b>Shut the hell up!</b>"},
+{c:"gro",r:"vulgar",es:"¡Lárgate de aquí!",en:"Get lost! / Piss off!",why:"<b>Get lost</b> es rudo pero común. <b>Piss off</b> es más vulgar y típico del Reino Unido. Alternativa suave: <i>Leave me alone</i>."},
+{c:"gro",r:"vulgar",es:"¿Qué demonios te pasa?",en:"What the hell is wrong with you?",why:"<b>The hell</b> intensifica la pregunta (como “qué diablos”). Es fuerte pero muy usado. No uses con jefes ni desconocidos."},
+{c:"gro",r:"vulgar",es:"Eso es una mentira, puras tonterías.",en:"That’s bullshit.",why:"<b>Bullshit</b> es vulgar pero extremadamente común. Equivalente suave: <b>That’s nonsense</b> o <i>baloney</i>. En contextos formales, evítalo."},
+{c:"gro",r:"vulgar",es:"Estoy jodido, esto no tiene arreglo.",en:"I’m screwed.",why:"<b>Screwed</b> = en graves problemas. Es informal-vulgar, no tan fuerte como la versión con la palabra más obscena. Alternativa neutra: <i>I’m in trouble</i>."},
+{c:"gro",r:"vulgar",es:"Eres un dolor de cabeza.",en:"You’re a pain in the neck.",why:"<b>Pain in the neck</b> = alguien molesto (más suave). La versión vulgar es <i>pain in the ass</i>. En español dolor de cabeza; en inglés, el dolor está en el cuello."},
+{c:"gro",r:"informal",es:"¡Maldición! Se me olvidó.",en:"Damn it! I forgot.",why:"<b>Damn it</b> es una maldición suave. <b>Damn</b> puede ofender en contextos muy formales. Aun más suave: <i>Darn it</i> o <i>Shoot</i>."},
+{c:"mod",r:"informal",es:"No te preocupes, es pan comido.",en:"Don’t worry, it’s a piece of cake.",why:"<b>Pan comido</b> y <b>piece of cake</b> son modismos distintos con el mismo sentido: algo muy fácil. Equivalente literal: <i>It’s very easy</i>."},
+{c:"mod",r:"informal",es:"Eso cuesta un ojo de la cara.",en:"That costs an arm and a leg.",why:"En español el “ojo”; en inglés “brazo y pierna”. Mismo sentido: muy caro. Cuidado: <b>costs</b> en presente; no confundir con <i>cost</i> en pasado."},
+{c:"mod",r:"informal",es:"Hablando del rey de Roma…",en:"Speaking of the devil…",why:"Se dice cuando aparece la persona de la que se habla. Inglés: <b>the devil</b>; español: “el rey de Roma”. Versión completa: <i>Speak of the devil and he shall appear</i>."},
+{c:"mod",r:"neutro",es:"Cada loco con su tema.",en:"To each their own.",why:"Equivalente: <b>to each their own</b> (o <i>each to their own</i>). Se usa para aceptar gustos distintos. También <i>Different strokes for different folks</i> (informal)."},
+{c:"mod",r:"informal",es:"Me estás tomando el pelo.",en:"You’re pulling my leg.",why:"<b>Tomar el pelo</b> = <b>pull someone’s leg</b> (la pierna, no el pelo). Ambos son bromas. Alternativa directa: <i>You’re kidding</i>."},
+{c:"neg",r:"neutro",es:"Estoy harto de esto.",en:"I’m fed up with this.",why:"<b>Estar harto de</b> = <b>be fed up with</b> (con <i>with</i>). Más fuerte: <i>I’ve had it</i>. Formal: <i>I’m tired of this situation</i>."},
+{c:"neg",r:"informal",es:"No me importa en absoluto.",en:"I couldn’t care less.",why:"Literal: “no podría importarme menos”. Parece negativo pero es afirmativo en significado. Error común: <span class=x>I could care less</span> (se oye en EE. UU., pero es incoherente)."},
+{c:"neg",r:"informal",es:"Me sacas de quicio.",en:"You’re driving me up the wall.",why:"<b>Sacar de quicio</b> = <b>drive someone up the wall</b> o <b>drive someone crazy</b>. La imagen es subir por las paredes de desesperación."},
+{c:"neg",r:"neutro",es:"Lamento mucho escuchar eso.",en:"I’m so sorry to hear that.",why:"Respuesta a malas noticias. <b>Sorry to hear that</b> expresa empatía, no culpa. No decir “I regret it” (suena a que lo causaste tú)."}
+];
+const E=[
+["Hey Sam, what’s up? — Not much, just got off work.","Hola Sam, ¿qué hubo? — Nada, recién salí del trabajo."],
+["Mr. Lopez, pleased to meet you. I’ve heard great things about your company.","Sr. López, mucho gusto. He oído cosas muy buenas de su empresa."],
+["Long time no see! You look great. What have you been up to?","¡Cuánto tiempo! Te ves genial. ¿Qué has estado haciendo?"],
+["Thanks for dinner! Take care, and see you later this week.","¡Gracias por la cena! Cuídate y nos vemos luego esta semana."],
+["Come on in, take your shoes off and make yourself at home.","Pasa, quítate los zapatos y siéntete como en tu casa."],
+["You got the scholarship? That’s great news, I’m so happy for you!","¿Te dieron la beca? ¡Qué buena noticia, me alegro mucho por ti!"],
+["Your presentation was perfect. You really nailed it!","Tu presentación estuvo perfecta. ¡De verdad te salió genial!"],
+["You drove me to the airport at 5 a.m.? You’re a lifesaver!","¿Me llevaste al aeropuerto a las 5 a. m.? ¡Eres un salvavidas!"],
+["Don’t worry about the interview. I’ve got your back.","No te preocupes por la entrevista. Yo te respaldo."],
+["The concert was awesome! The band was incredible and I was blown away.","¡El concierto estuvo genial! La banda fue increíble y me dejó sin palabras."],
+["Thank you for your time. I look forward to hearing from you.","Gracias por su tiempo. Quedo atento a su respuesta."],
+["Hello Ms. Reed, I’m writing to follow up on the invoice I sent last week.","Hola Sra. Reed, le escribo para hacer seguimiento a la factura que envié la semana pasada."],
+["If we want the client to stay happy, we need to meet the deadline.","Si queremos que el cliente siga contento, tenemos que cumplir con la fecha límite."],
+["Before we start the project, let’s get on the same page about the budget.","Antes de empezar el proyecto, pongámonos de acuerdo sobre el presupuesto."],
+["The supplier hasn’t answered yet, but I’ll keep you posted.","El proveedor aún no responde, pero te mantendré al tanto."],
+["I’ve been here for three years, so I’d like to ask for a raise.","Llevo tres años aquí, así que me gustaría pedir un aumento de sueldo."],
+["Shut up! I’m trying to hear the movie. (entre amigos)","¡Cállate! Intento oír la película. (entre amigos)"],
+["Just get lost, I don’t want to talk to you right now.","Lárgate, no quiero hablar contigo ahora."],
+["What the hell is wrong with you? You almost hit that car!","¿Qué demonios te pasa? ¡Casi chocas ese carro!"],
+["He says he never got my message. That’s bullshit, I saw him read it.","Dice que nunca recibió mi mensaje. Eso es una mentira, lo vi leerlo."],
+["I lost my wallet and my keys. I’m screwed.","Perdí mi billetera y mis llaves. Estoy jodido."],
+["My little brother is a real pain in the neck when I’m studying.","Mi hermano menor es un verdadero dolor de cabeza cuando estudio."],
+["Damn it! I left my phone on the bus.","¡Maldición! Dejé mi teléfono en el bus."],
+["The test was a piece of cake. I finished in twenty minutes.","El examen fue pan comido. Terminé en veinte minutos."],
+["That watch looks nice, but it costs an arm and a leg.","Ese reloj se ve bonito, pero cuesta un ojo de la cara."],
+["We were just talking about Ana… speaking of the devil, here she is!","Estábamos hablando de Ana… ¡hablando del rey de Roma, ahí viene!"],
+["You like pineapple on pizza? Well, to each their own.","¿Te gusta la piña en la pizza? Bueno, cada loco con su tema."],
+["You won the lottery? Come on, you’re pulling my leg!","¿Te ganaste la lotería? ¡No, me estás tomando el pelo!"],
+["I’m fed up with this noise. It never stops.","Estoy harto de este ruido. Nunca para."],
+["People can say what they want. I couldn’t care less.","La gente puede decir lo que quiera. No me importa en absoluto."],
+["Stop tapping the table. You’re driving me up the wall!","Deja de golpear la mesa. ¡Me estás sacando de quicio!"],
+["Your grandmother is in the hospital? I’m so sorry to hear that.","¿Tu abuela está en el hospital? Lamento mucho escuchar eso."]
+];
+S.forEach((s,k)=>{s.ex=E[k][0];s.xs=E[k][1]});
+const app=document.getElementById('app');
+const sel=new Set(["sal","pos","trab","mod","neg"]);
+let deck=[],i=0,shown=false;
+function practica(){
+ deck=S.filter(s=>sel.has(s.c));if(i>=deck.length)i=0;
+ let body;
+ if(!deck.length){body='<div class="card">Selecciona al menos una categoría.</div>'}
+ else{const s=deck[i];
+  body=`<div class="card"><span class="tag">${C[s.c]}</span> <span class="tag rg">${s.r}</span><div class="es">${s.es}</div>
+  <div id="r" class="${shown?'':'hide'}"><div class="en">${s.en}</div><div class="why"><b>¿Por qué?</b> ${s.why}</div><div class="box"><b>Ejemplo:</b> <i>${s.ex}</i><br>${s.xs}</div></div>
+  <div class="btns"><button class="p" id="rev">${shown?'Ocultar':'Mostrar traducción'}</button><button id="pv">← Anterior</button><button id="nx">Siguiente →</button><button id="rd">Al azar</button></div></div>`}
+ app.innerHTML=`<h1>¿Cómo se dice?</h1><p class="sub">Elige las categorías, di la expresión en inglés y revisa. ${deck.length?`Frase ${i+1} de ${deck.length}.`:''}</p>
+ <div class="chips">${Object.keys(C).map(k=>`<button class="chip ${sel.has(k)?'on':''}" data-k="${k}">${C[k]}</button>`).join('')}<button class="chip" id="all">Todas</button></div>
+ ${sel.has('gro')?'<div class="box">Contenido vulgar: se incluye para entender el inglés real. Úsalo solo con amigos cercanos, nunca en el trabajo ni con desconocidos.</div>':''}${body}`;
+ document.querySelectorAll('.chip[data-k]').forEach(b=>b.onclick=()=>{const k=b.dataset.k;sel.has(k)?sel.delete(k):sel.add(k);i=0;shown=false;practica()});
+ document.getElementById('all').onclick=()=>{Object.keys(C).forEach(k=>sel.add(k));i=0;shown=false;practica()};
+ if(!deck.length)return;
+ document.getElementById('rev').onclick=()=>{shown=!shown;practica()};
+ document.getElementById('pv').onclick=()=>{i=(i+deck.length-1)%deck.length;shown=false;practica()};
+ document.getElementById('nx').onclick=()=>{i=(i+1)%deck.length;shown=false;practica()};
+ document.getElementById('rd').onclick=()=>{i=Math.floor(Math.random()*deck.length);shown=false;practica()};
+}
+function explicacion(){
+ app.innerHTML=`<h1>Explicación</h1><p class="sub">Cómo usar la actividad y por qué las expresiones no se traducen palabra por palabra.</p>
+ <h2>Cómo funciona</h2>
+ <ol><li>Elige las categorías con los botones.</li><li>Lee la frase en español y di la expresión en inglés.</li><li>Pulsa “Mostrar traducción” y lee el “¿Por qué?”.</li><li>Fíjate en el <b>registro</b> (formal, neutro, informal, vulgar) antes de usarla.</li></ol>
+ <h2>Ideas clave</h2>
+ <div class="box"><b>1. Las expresiones son bloques, no suma de palabras.</b><br>“Tomar el pelo” no es <span class="x">take the hair</span>, sino <i>pull someone’s leg</i>. Se aprende el bloque completo.</div>
+ <div class="box"><b>2. El registro importa tanto como el significado.</b><br><i>Be quiet</i>, <i>Shut up</i> y <i>Shut the hell up</i> dicen lo mismo con tonos muy distintos.</div>
+ <div class="box"><b>3. Inglés de EE. UU. y de Reino Unido a veces cambia.</b><br>Aumento de sueldo: <i>raise</i> (EE. UU.) / <i>pay rise</i> (UK). <i>Piss off</i> es mucho más británico.</div>
+ <div class="box"><b>4. Las groseras se entienden, no siempre se usan.</b><br>Aprenderlas ayuda a entender series, canciones y conversaciones reales. Para usarlas, mira siempre quién te escucha.</div>
+ <h2>Escala de registro</h2>
+ <div class="wrap"><table><tr><th>Registro</th><th>Ejemplo (“cállate”)</th></tr>
+ <tr><td>Formal</td><td>Could I ask you to be quiet, please?</td></tr>
+ <tr><td>Neutro</td><td>Please be quiet.</td></tr>
+ <tr><td>Informal</td><td>Quiet down, will you?</td></tr>
+ <tr><td>Vulgar</td><td>Shut up! / Shut the hell up!</td></tr></table></div>
+ <p class="sub">Consejo para el profesor: pide al estudiante que diga en qué situación usaría cada expresión antes de ver la respuesta.</p>`;
+}
+function expresiones(){
+ app.innerHTML=`<h1>Expresiones</h1><p class="sub">Todas las expresiones, con registro y categoría.</p><input id="q" placeholder="Buscar…"><select id="f"><option value="">Todas las categorías</option>${Object.keys(C).map(k=>`<option value="${k}">${C[k]}</option>`).join('')}</select>
+ <div class="wrap"><table><thead><tr><th>English</th><th>Español</th><th>Categoría</th><th>Registro</th></tr></thead><tbody id="tb"></tbody></table></div>`;
+ const draw=()=>{const q=document.getElementById('q').value.toLowerCase(),f=document.getElementById('f').value;
+  document.getElementById('tb').innerHTML=S.filter(s=>(!f||s.c===f)&&(s.en+' '+s.es).toLowerCase().includes(q)).map(s=>`<tr><td><b>${s.en}</b><br><i>${s.ex}</i></td><td>${s.es}</td><td>${C[s.c]}</td><td>${s.r}</td></tr>`).join('')};
+ draw();document.getElementById('q').oninput=draw;document.getElementById('f').onchange=draw;
+}
+function route(){
+ const v=(location.hash||'#practica').slice(1);
+ const view=['practica','explicacion','expresiones'].includes(v)?v:'practica';
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===view));
+ ({practica,explicacion,expresiones})[view]();
+}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
